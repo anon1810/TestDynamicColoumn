@@ -1,0 +1,32 @@
+﻿@model List<TestDynamicColoumn.Controllers.Post>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Posts</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in Model)
+            {
+                <tr>
+                    <td>@post.UserId</td>
+                    <td>@post.Id</td>
+                    <td>@post.Title</td>
+                    <td>@post.Body</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
